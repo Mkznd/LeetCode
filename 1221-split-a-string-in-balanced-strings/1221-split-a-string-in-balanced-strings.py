@@ -9,6 +9,5 @@ class Solution:
                 L+=1
             else:
                 R+=1
-            if L == R:
-                res+=1
+            res+=L == R
         return res
