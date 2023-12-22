@@ -5,9 +5,9 @@ class Solution:
         res = 0
         
         for i in s:
-            if i =="L":
+            if i == "L":
                 L+=1
             else:
                 R+=1
-            res+=L == R
+            res+= L == R
         return res
