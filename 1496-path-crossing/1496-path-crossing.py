@@ -1,17 +1,14 @@
 class Solution:
     def isPathCrossing(self, path: str) -> bool:
+        a = {"N": 1, "S": -1, "E": 0, "W": 0}
+        b = {"E": 1, "W": -1,"N": 0, "S": 0 }
+
         x, y = 0,0
-        p = []
+        p = set()
         for i in path:
-            p.append((x,y))
-            if i=="N":
-                y+=1
-            elif i=="S":
-                y-=1
-            elif i=="E":
-                x+=1
-            else:
-                x-=1
+            p.add((x,y))
+            y+=a[i]
+            x+=b[i]
             if (x,y) in p:
                 return True
             
