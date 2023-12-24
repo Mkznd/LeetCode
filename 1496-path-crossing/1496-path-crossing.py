@@ -10,6 +10,6 @@ class Solution:
             y+=a[i]
             x+=b[i]
             if (x,y) in p:
-                return True     
+                return True   
         return False
         
