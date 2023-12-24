@@ -11,6 +11,5 @@ class Solution:
             x+=b[i]
             if (x,y) in p:
                 return True
-            
         return False
         
