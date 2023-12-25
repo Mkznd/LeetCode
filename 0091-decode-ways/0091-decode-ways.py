@@ -5,6 +5,7 @@ class Solution:
             return 0
         n = len(s)
         dp = [0 for _ in range(n+1)]
+        nums = {i for i in range(10, 27)}
         dp[0] = 1
         dp[1] = 1
         
@@ -14,7 +15,7 @@ class Solution:
             
             if one_digit >= 1:
                 dp[i] = dp[i-1]
-            if two_digit in range(10, 27):
+            if two_digit in nums:
                 dp[i] += dp[i-2]
                 
         return dp[n]
