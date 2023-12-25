@@ -10,11 +10,9 @@ class Solution:
         elif not list2:
             return list1
         
-        res = ListNode()
         if list1.val <= list2.val:
-            res.val = list1.val
-            res.next = self.mergeTwoLists(list1.next, list2)
-        else:
-            res.val = list2.val
-            res.next = self.mergeTwoLists(list1, list2.next)
-        return res
+            list1.next = self.mergeTwoLists(list1.next, list2)
+            return list1
+        list2.next = self.mergeTwoLists(list1, list2.next)
+        return list2
+
