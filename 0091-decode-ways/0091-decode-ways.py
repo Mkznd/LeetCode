@@ -14,7 +14,7 @@ class Solution:
             
             if one_digit >= 1:
                 dp[i] = dp[i-1]
-            if two_digit >= 10 and two_digit <= 26:
+            if two_digit in range(10, 27):
                 dp[i] += dp[i-2]
                 
         return dp[n]
