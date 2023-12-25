@@ -14,5 +14,6 @@ class Solution:
             list1.next = self.mergeTwoLists(list1.next, list2)
             return list1
         list2.next = self.mergeTwoLists(list1, list2.next)
+        
         return list2
 
