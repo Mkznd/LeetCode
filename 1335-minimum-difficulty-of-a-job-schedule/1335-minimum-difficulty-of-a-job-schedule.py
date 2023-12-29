@@ -2,6 +2,8 @@ class Solution:
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         if len(jobDifficulty) < d:
             return -1
+        if sum(jobDifficulty) == 0:
+            return 0
         
         cache = {}
         
