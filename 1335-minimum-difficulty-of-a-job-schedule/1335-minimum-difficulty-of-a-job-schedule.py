@@ -6,21 +6,20 @@ class Solution:
             return 0
         
         @functools.cache
-        def dfs(i, d, cur_max):
-            if i == len(jobDifficulty):
-                return 0 if d == 0 else inf
-            if d == 0:
+        def dfs(i, d, day_max):
+            if i==len(jobDifficulty):
+                return 0 if d==0 else inf
+            if d==0:
                 return inf
-
             
-            cur_max = max(cur_max, jobDifficulty[i])
+            day_max = max(day_max, jobDifficulty[i])
+            
             res = min(
-                dfs(i+1, d, cur_max),
-                cur_max + dfs(i+1, d-1, -1)
+                dfs(i+1, d, day_max),
+                day_max + dfs(i+1, d-1, -1)
             )
             
             return res
-            
         
         return dfs(0, d, -1)
         
