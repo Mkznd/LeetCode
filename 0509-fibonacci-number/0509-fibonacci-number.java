@@ -4,12 +4,12 @@ class Solution {
             return n;
         }
         
-        var a = new int[n+1];
-        a[0]=0;
-        a[1]=1;
-        for(int i=2;i<n+1;i++){
-            a[i]=a[i-1]+a[i-2];
+        int pre=0, cur=1;
+        for(int i=2;i<=n;i++){
+            var t = pre;
+            pre = cur;
+            cur = t+cur;
         }
-        return a[n];
+        return cur;
     }
 }
