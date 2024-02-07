@@ -1,9 +1,6 @@
+from collections import Counter
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        a = {}
-        for index, i in enumerate(s):
-            if a.get(i) == None:
-                a[i] = index
-            else:
-                a[i] = -1
-        return min([i for i in a.values() if i!=-1], default=-1)
+        counts = dict(Counter(s))
+        a = {i: s.index(i) for i in counts.keys() if counts[i] == 1}
+        return min([i for i in a.values()], default=-1)
