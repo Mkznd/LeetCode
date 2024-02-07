@@ -1,4 +1,3 @@
-from collections import defaultdict
 class Solution:
     def repeatedCharacter(self, s: str) -> str:
         a = set()
