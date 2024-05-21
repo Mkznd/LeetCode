@@ -8,7 +8,6 @@ class Solution:
                 continue
             
             s = str1[:i]
-            print(s)
             if s*(len(str1)//i) != str1 or s*(len(str2)//i) != str2: continue
             
             if len(max_s) < len(s):
