@@ -4,11 +4,11 @@ class Solution {
         for (int x : nums) set.add(x);
 
         int maxLen = 0;
-
+        var curLen = 0;
+        var curElement = 0;
         for(var i: set){
-            var curLen = 0;
-            var curElement = i;
-
+            curLen = 0;
+            curElement = i;
             if (set.contains(curElement+1)) continue;
             while(set.contains(curElement)){
                 curLen++;
