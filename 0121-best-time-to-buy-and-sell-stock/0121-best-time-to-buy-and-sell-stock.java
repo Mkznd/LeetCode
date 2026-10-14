@@ -9,6 +9,6 @@ class Solution {
             profit = Math.max(profit, prices[i] - minSoFar);
         }
 
-        return profit >= 0 ? profit : 0;
+        return profit;
     }
 }
