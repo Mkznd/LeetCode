@@ -10,6 +10,5 @@ class Solution {
         }
 
         return profit >= 0 ? profit : 0;
-        
     }
 }
