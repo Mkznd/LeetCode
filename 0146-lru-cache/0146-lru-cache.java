@@ -23,6 +23,11 @@ class DoubleLinkedList {
 
     public Node clearHead(){
         var tmp = head;
+        if (head == tail) {
+            head = null;
+            tail = null;
+            return tmp;
+        }
         if (head != null && head.next != null) head.next.prev = null;
         head = head == null ? null : head.next;
         return tmp;
