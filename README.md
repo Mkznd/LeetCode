@@ -19,6 +19,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0003-longest-substring-without-repeating-characters](https://github.com/Mkznd/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0049-group-anagrams](https://github.com/Mkznd/LeetCode/tree/master/0049-group-anagrams) |
 | [0128-longest-consecutive-sequence](https://github.com/Mkznd/LeetCode/tree/master/0128-longest-consecutive-sequence) |
+| [0146-lru-cache](https://github.com/Mkznd/LeetCode/tree/master/0146-lru-cache) |
 ## String
 |  |
 | ------- |
@@ -49,4 +50,16 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0015-3sum](https://github.com/Mkznd/LeetCode/tree/master/0015-3sum) |
+## Linked List
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/Mkznd/LeetCode/tree/master/0146-lru-cache) |
+## Design
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/Mkznd/LeetCode/tree/master/0146-lru-cache) |
+## Doubly-Linked List
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/Mkznd/LeetCode/tree/master/0146-lru-cache) |
 <!---LeetCode Topics End-->
