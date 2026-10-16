@@ -17,44 +17,28 @@ class DoubleLinkedList {
     Node tail;
 
     public DoubleLinkedList(){
-        head = null;
-        tail = null;
+        head = new Node(0,0);
+        head.next = tail;
+        tail = new Node(0,0);
+        tail.prev = head;
+    }
+
+    public void insertTail(Node newNode){
+        newNode.next = tail;
+        newNode.prev = tail.prev;
+        tail.prev.next = newNode;
+        tail.prev = newNode;
+    }
+
+    public void removeNode(Node n){
+        n.prev.next = n.next;
+        n.next.prev = n.prev;
     }
 
     public Node clearHead(){
-        var tmp = head;
-        if (head == tail) {
-            head = null;
-            tail = null;
-            return tmp;
-        }
-        if (head != null && head.next != null) head.next.prev = null;
-        head = head == null ? null : head.next;
+        var tmp = head.next;
+        this.removeNode(head.next);
         return tmp;
-    }
-
-    public void insertTail(Node newTail){
-        if (head == null && tail == null){
-            head = newTail;
-            tail = newTail;
-            return;
-        }
-        tail.next = newTail;
-        newTail.prev = tail;
-        newTail.next = null;
-        tail = newTail;
-    }
-
-    public void deleteElement(Node elem){
-        if (elem == null) return;
-        if (head == elem) head = (head == null) ? null : head.next;
-        if (tail == elem) tail = (tail == null) ? null : tail.prev;
-        if (elem.prev != null){
-            elem.prev.next = elem.next;
-        }
-        if (elem.next != null){
-            elem.next.prev = elem.prev;
-        }
     }
 }
 
@@ -75,7 +59,7 @@ class LRUCache {
         if (node == null){
             return -1;
         }
-        items.deleteElement(node);
+        items.removeNode(node);
         items.insertTail(node);
         return node.value;
 
@@ -83,7 +67,7 @@ class LRUCache {
     
     public void put(int key, int value) {
         if (map.containsKey(key)){
-            items.deleteElement(map.get(key));
+            items.removeNode(map.get(key));
         }
         var newNode = new Node(key, value);
         items.insertTail(newNode);
